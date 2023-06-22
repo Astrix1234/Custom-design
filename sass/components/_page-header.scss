@@ -1,0 +1,85 @@
+.header {
+  z-index: 5;
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #8263bd, #f8959f);
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    padding: 0 15px 0 15px;
+    position: relative;
+  }
+  &__flags {
+    display: flex;
+    margin-left: auto;
+  }
+}
+.for-tennis {
+  color: getColor('accentLight');
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.menu-container {
+  position: absolute;
+  top: 7vh;
+}
+.navigation {
+  font-size: 10px;
+  color: getColor('accentLight');
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 600;
+  gap: 10px;
+  & li:last-child {
+    margin-top: 10px;
+  }
+  & li {
+    transition: $trensColor;
+    &:hover,
+    &:focus {
+      color: #ffd8bf;
+    }
+  }
+}
+@media #{$desktop} {
+  .header {
+    &__container {
+      height: 100%;
+      padding: 0 80px 0 80px;
+    }
+  }
+  .for-tennis {
+    font-size: $fontSizeTitle;
+    margin-right: 70px;
+    font-weight: 600;
+  }
+  .menu-container {
+    position: static;
+  }
+  .navigation {
+    font-size: $fontSizeBig;
+    color: getColor('accentLight');
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    gap: 40px;
+
+    & li:last-child {
+      margin-top: 10px;
+    }
+    & li {
+      transition: $trensColor;
+      &:hover,
+      &:focus {
+        color: #ffd8bf;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a {
+  color: inherit;
+}
+body {
+  font-family: $fontFamilyMain;
+  font-size: $fontSizeBig;
+  color: getColor('primary');
+}
+.background {
+  background-image: linear-gradient(to bottom right, #8263bd, #f8959f, #ffd8bf);
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+}
+.container {
+  min-width: 320px;
+  max-width: 480px;
+  padding: 10vh 15px 0 15px;
+  margin: 0 auto;
+}
+@media #{$tablet} {
+  .container {
+    max-width: 768px;
+  }
+}
+@media #{$desktop} {
+  body {
+    font-family: $fontFamilyMain;
+    font-size: $fontSizeBig;
+    color: getColor('primary');
+  }
+  .background {
+    background-image: linear-gradient(
+      to bottom right,
+      #8263bd,
+      #f8959f,
+      #ffd8bf
+    );
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+  }
+  .container {
+    max-width: 1200px;
+    padding: 10vh 80px 0 80px;
+  }
+}
