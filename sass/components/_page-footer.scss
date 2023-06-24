@@ -56,7 +56,25 @@
     fill: #8263bd;
   }
 }
-
+@media #{$tablet} {
+  .footer {
+    &__container {
+      flex-direction: row;
+      align-items: center;
+    }
+    &__contacts {
+      text-align: left;
+    }
+    & li {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__socialmedia {
+      margin-left: auto;
+    }
+  }
+}
 @media #{$desktop} {
   .footer {
     &__container {

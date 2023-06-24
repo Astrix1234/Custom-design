@@ -17,6 +17,9 @@
     display: flex;
     margin-left: auto;
   }
+  &__logo {
+    display: flex;
+  }
 }
 .for-tennis {
   color: getColor('accentLight');
@@ -36,9 +39,6 @@
   align-items: center;
   font-weight: 600;
   gap: 10px;
-  & li:last-child {
-    margin-top: 10px;
-  }
   & li {
     transition: $trensColor;
     &:hover,
@@ -47,16 +47,45 @@
     }
   }
 }
+@media #{$tablet} {
+  .header {
+    &__container {
+      height: 100%;
+    }
+    &__flags {
+      flex-direction: column;
+    }
+    &__logo {
+      flex-direction: column;
+      margin-right: 70px;
+    }
+  }
+  .for-tennis {
+    margin-right: 10px;
+    font-weight: 600;
+    font-size: $fontSizeBigger;
+    margin-left: 20px;
+  }
+  .menu-container {
+    position: static;
+  }
+  .navigation {
+    font-size: $fontSizeSmall;
+    gap: 25px;
+  }
+}
 @media #{$desktop} {
   .header {
     &__container {
       height: 100%;
       padding: 0 80px 0 80px;
     }
+    &__logo {
+      margin-right: 70px;
+    }
   }
   .for-tennis {
     font-size: $fontSizeTitle;
-    margin-right: 70px;
     font-weight: 600;
   }
   .menu-container {
@@ -64,22 +93,6 @@
   }
   .navigation {
     font-size: $fontSizeBig;
-    color: getColor('accentLight');
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-weight: 600;
     gap: 40px;
-
-    & li:last-child {
-      margin-top: 10px;
-    }
-    & li {
-      transition: $trensColor;
-      &:hover,
-      &:focus {
-        color: #ffd8bf;
-      }
-    }
   }
 }
